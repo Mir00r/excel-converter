@@ -1,21 +1,21 @@
-//package com.mir00r;
-//
-//import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-//import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
-//import org.apache.poi.openxml4j.opc.OPCPackage;
-//import org.apache.poi.xssf.eventusermodel.XSSFReader;
-//import org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler;
-//import org.apache.poi.xssf.model.SharedStringsTable;
-//import org.apache.poi.xssf.usermodel.XSSFRichTextString;
-//import org.apache.xmlbeans.XmlException;
-//import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTRst;
-//import org.xml.sax.*;
-//import org.xml.sax.helpers.DefaultHandler;
-//import org.xml.sax.helpers.XMLReaderFactory;
-//
-//import java.io.*;
-//
-//public class ConverterWithStreamingService {
+package com.mir00r;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
+import org.apache.poi.openxml4j.opc.OPCPackage;
+import org.apache.poi.xssf.eventusermodel.XSSFReader;
+import org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler;
+import org.apache.poi.xssf.model.SharedStringsTable;
+import org.apache.poi.xssf.usermodel.XSSFRichTextString;
+import org.apache.xmlbeans.XmlException;
+import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTRst;
+import org.xml.sax.*;
+import org.xml.sax.helpers.DefaultHandler;
+import org.xml.sax.helpers.XMLReaderFactory;
+
+import java.io.*;
+
+public class ConverterWithStreamingService {
 //
 //    private SharedStringsTable sharedStrings;
 //    private boolean hasMoreRows;
@@ -134,4 +134,4 @@
 //
 //        System.out.println("Saved CSV chunk: " + csvFileName);
 //    }
-//}
+}

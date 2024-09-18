@@ -1,26 +1,56 @@
 package com.mir00r;
 
+import org.apache.camel.CamelContext;
+import org.apache.camel.ProducerTemplate;
+import org.apache.camel.impl.DefaultCamelContext;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+@SpringBootApplication
 public class Main {
 
     private static final int CHUNK_SIZE = 10000; // Adjust the chunk size as needed
     private static final String CSV_SEPARATOR = ","; // Change to your desired CSV separator
 
     public static void main(String[] args) throws Exception {
+
+        SpringApplication.run(Main.class, args);
+
+        // Initialize Camel context
+//        CamelContext camelContext = new DefaultCamelContext();
+//        ProducerTemplate producerTemplate = camelContext.createProducerTemplate();
+//        ExecutorService producerExecutor = Executors.newFixedThreadPool(2);
+//        ExecutorService consumerExecutor = Executors.newFixedThreadPool(5);
+//
+//        BlockingQueue<InputStream> taskQueue = new ArrayBlockingQueue<>(1000); // Queue for Excel data streams
+//
+//        // Start producer and consumer threads
+//        producerExecutor.execute(new ExcelProducer("path/to/excel.xlsx", taskQueue, producerTemplate));
+//        consumerExecutor.execute(new CsvConsumerProcessor(taskQueue, "path/to/output"));
+//
+//        // Shutdown executors after processing
+//        producerExecutor.shutdown();
+//        consumerExecutor.shutdown();
+
+
+
+
 //        new ConverterService().convert();
 //        new ExcelFileReaderService().read();
-        new ConverterWithThreadService().convert();
+//        new ConverterWithThreadService().convert();
 
 //        String excelFilePath = "c:/Users/sdarmd/Desktop/sdedocs/excel/Employee_Data_1M.xlsx"; // Provide the path to your Excel file
 //        String outputDirectory = "c:/Users/sdarmd/Desktop/sdedocs/csv"; // Provide the path to your output directory
